@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import "./db.js";
@@ -6,7 +7,6 @@ import rootRouter from "./routers/rootRouter.js";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import { localsMiddleware } from "./middlewares.js";
-import multer from "multer";
 
 const PORT = 4000;
 const app = express();
@@ -20,7 +20,7 @@ app.use(
     secret: "mfd",
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: "mongodb://127.0.0.1:27017/mfd" }),
+    store: MongoStore.create({ mongoUrl: process.env.DB_URL }),
   })
 );
 
