@@ -31,8 +31,6 @@ var userSchema = new _mongoose["default"].Schema({
     required: true
   }
 });
-
-// this : create 되는 User를 의미함.
 userSchema.pre("save", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
   return _regeneratorRuntime().wrap(function _callee$(_context) {
     while (1) switch (_context.prev = _context.next) {

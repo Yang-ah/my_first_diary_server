@@ -12,7 +12,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var patchExercise = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(req, res) {
-    var _req$body, id, month, date, exercise, user, newUserData, patchUser;
+    var _req$body, id, month, date, exercise, user, newUserData;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
@@ -33,19 +33,18 @@ var patchExercise = /*#__PURE__*/function () {
             }
           });
         case 9:
-          patchUser = _context.sent;
           return _context.abrupt("return", res.send("updated exercise ".concat(date, " ").concat(month)));
-        case 13:
-          _context.prev = 13;
+        case 12:
+          _context.prev = 12;
           _context.t0 = _context["catch"](0);
           return _context.abrupt("return", res.status(400).send({
             errorMessage: _context.t0._message
           }));
-        case 16:
+        case 15:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[0, 13]]);
+    }, _callee, null, [[0, 12]]);
   }));
   return function patchExercise(_x, _x2) {
     return _ref.apply(this, arguments);
