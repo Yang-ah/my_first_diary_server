@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://endearing-raindrop-af7125.netlify.app/",
     credentials: true,
     optionsSuccessStatus: 200,
   })
