@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var PORT = 4000;
 var app = (0, _express["default"])();
 app.use((0, _cors["default"])({
-  origin: true,
+  origin: "http://localhost:3000",
   credentials: true,
   optionsSuccessStatus: 200
 }));
