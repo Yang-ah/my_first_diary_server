@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.REACTAPP_URL,
+    origin: process.env.REACT_APP_URL,
     credentials: true,
     optionsSuccessStatus: 200,
   })
@@ -34,7 +34,7 @@ app.use(localsMiddleware);
 app.use("/", rootRouter);
 
 const handleListening = () =>
-  console.log(`✅ Server listenting on port http://localhost:${PORT} 🚀`);
+  console.log(`✅ Server listening on port http://localhost:${PORT} 🚀`);
 
 app.listen(PORT, handleListening);
 
