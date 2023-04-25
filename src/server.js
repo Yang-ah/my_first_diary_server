@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: true,
+    origin: process.env.REACTAPP_URL,
     credentials: true,
     optionsSuccessStatus: 200,
   })
