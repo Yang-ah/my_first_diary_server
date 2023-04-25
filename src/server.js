@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://web-my-first-diary-1maxx2algssnb7w.sel3.cloudtype.app/",
+    origin: true,
     credentials: true,
     optionsSuccessStatus: 200,
   })
