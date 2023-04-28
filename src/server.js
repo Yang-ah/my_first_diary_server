@@ -1,4 +1,3 @@
-import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import "./db.js";
@@ -8,12 +7,12 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import { localsMiddleware } from "./middlewares.js";
 
-const PORT = 4000;
+const PORT = 8000;
 const app = express();
 
 app.use(
   cors({
-    origin: process.env.REACT_APP_URL,
+    origin: "*",
     credentials: true,
     optionsSuccessStatus: 200,
   })
